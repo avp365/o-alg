@@ -139,10 +139,11 @@ func (p *Pot) S06() {
 
 		for j := 0; j < p.D; j++ {
 
-			if j/2 == i {
-
+			if i < 10 {
 				p.M[i][j] = p.ViewS
-
+			}
+			if j < 10 {
+				p.M[i][j] = p.ViewS
 			}
 
 		}
