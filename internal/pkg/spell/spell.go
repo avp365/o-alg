@@ -127,7 +127,7 @@ func (p *Pot) S05() {
 	}
 }
 
-// spell 06
+// 6 spell 06
 func (p *Pot) S06() {
 
 	for i := 0; i < p.D; i++ {
@@ -145,7 +145,7 @@ func (p *Pot) S06() {
 	}
 }
 
-// 6 spell 07
+// 7 spell 07
 func (p *Pot) S07() {
 
 	for i := 0; i < p.D; i++ {
