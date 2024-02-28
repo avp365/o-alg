@@ -29,15 +29,18 @@ func calc(n int, ni int) []int {
 
 	data := make([][]int, 9+1)
 	res := make([]int, ni*9+1)
-	resPrev := make([]int, ni*9+1)
 
 	for i := range data {
 		data[i] = make([]int, ni*9+1)
 	}
 
 	if ni > 1 {
-		resPrev = calc(n, ni-1)
 
+		for i := 0; i <= 9; i++ {
+			for s, v := range calc(n, ni-1) {
+				data[i][i+s] = v
+			}
+		}
 	}
 
 	if ni == 1 {
@@ -55,12 +58,6 @@ func calc(n int, ni int) []int {
 	}
 
 	if ni > 1 {
-
-		for i := 0; i <= 9; i++ {
-			for s, v := range resPrev {
-				data[i][i+s] = v
-			}
-		}
 
 	}
 
