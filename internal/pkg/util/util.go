@@ -16,7 +16,7 @@ func RunTest() {
 	dataAssert := AdapterInt(GetDataFromFiles(files))
 
 	for _, v := range dataAssert {
-		fmt.Println("test ", v[0], v[0])
+		fmt.Println("test ", v[0], v[1])
 
 		if task.Task(v[0]) == v[1] {
 			fmt.Println("test passed")
@@ -59,12 +59,15 @@ func GetDataFromFiles(files [][]string) [][]string {
 
 }
 func AdapterInt(data [][]string) [][]int {
-	fmt.Println(data)
+
 	dataAssert := [][]int{}
 
+	fmt.Println(dataAssert)
 	for _, v := range data {
+
 		n, _ := strconv.Atoi(v[0])
-		c, _ := strconv.Atoi(v[1])
+		c, _ := strconv.Atoi(strings.TrimRight(v[1], "\r\n"))
+
 		dataAssert = append(dataAssert, []int{n, c})
 	}
 
