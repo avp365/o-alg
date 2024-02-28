@@ -4,6 +4,7 @@ import (
 	"testing"
 )
 
-func TestTest(t *testing.T) {
-	Test()
+func TestRunTestFromData(t *testing.T) {
+
+	RunTest()
 }
