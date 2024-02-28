@@ -9,13 +9,13 @@ func main() {
 
 	start := time.Now()
 
-	n := 2
+	n := 4
 	summ := 0
 
 	data := calc(n, n)
 
 	for _, valueInt := range data {
-		summ += valueInt
+		summ += valueInt * valueInt
 	}
 
 	end := time.Now()
@@ -29,13 +29,14 @@ func calc(n int, ni int) []int {
 
 	data := make([][]int, 9+1)
 	res := make([]int, ni*9+1)
+	resPrev := make([]int, ni*9+1)
 
 	for i := range data {
 		data[i] = make([]int, ni*9+1)
 	}
 
 	if ni > 1 {
-		res = calc(n, ni-1)
+		resPrev = calc(n, ni-1)
 
 	}
 
@@ -54,25 +55,24 @@ func calc(n int, ni int) []int {
 	}
 
 	if ni > 1 {
-		fmt.Println(res)
 
 		for i := 0; i <= 9; i++ {
-			for s, v := range res {
+			for s, v := range resPrev {
 				data[i][i+s] = v
 			}
 		}
 
 	}
-	res = make([]int, ni*9+1)
+
 	for s := 0; s <= ni*9; s++ {
 		for i := 0; i <= 9; i++ {
 
 			res[s] = res[s] + data[i][s]
 
 		}
-		res[s] = res[s] * res[s]
-	}
 
+	}
+	fmt.Println(res)
 	return res
 
 }
