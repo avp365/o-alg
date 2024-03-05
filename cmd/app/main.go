@@ -11,12 +11,20 @@ import (
 func main() {
 	a := 3.0
 	n := 5.0
-	task.T1(int(a), int(n))
+
 	start := time.Now()
 
-	answer := math.Pow(a, n)
+	answerT := task.T1(int(a), int(n))
 
 	end := time.Now()
 	elapsed := end.Sub(start)
-	fmt.Println(answer, elapsed)
+	fmt.Println(answerT, elapsed)
+
+	start = time.Now()
+
+	answerP := math.Pow(a, n)
+
+	end = time.Now()
+	elapsed = end.Sub(start)
+	fmt.Println(answerP, elapsed)
 }
