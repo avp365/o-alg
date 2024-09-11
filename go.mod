@@ -1,4 +1,4 @@
-module github.com/avp365/arch-pat
+module github.com/avp365/alg
 
 go 1.19
 
