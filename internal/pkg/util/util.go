@@ -7,8 +7,6 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
-
-	"github.com/avp365/alg/internal/pkg/task"
 )
 
 func RunTest() {
@@ -18,7 +16,7 @@ func RunTest() {
 	for _, v := range dataAssert {
 		fmt.Println("test ", v[0], v[1])
 
-		if task.Run_task_14(v[0]) == v[1] {
+		if tasks.t14(v[0]) == v[1] {
 			fmt.Println("test passed")
 			continue
 		}

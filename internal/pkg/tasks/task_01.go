@@ -12,14 +12,14 @@ func Run_task_1() {
 
 	start := time.Now()
 
-	fmt.Println(t01(int(a), int(n)), time.Since(start))
+	fmt.Println(T01(int(a), int(n)), time.Since(start))
 
 	start = time.Now()
 
 	fmt.Println(math.Pow(a, n), time.Since(start))
 }
 
-func t01(a, n int) int {
+func T01(a, n int) int {
 
 	answer := 1
 	for i := 1; i <= n; i++ {

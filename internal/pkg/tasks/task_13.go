@@ -16,7 +16,7 @@ func Run_task_13() {
 
 }
 
-func t13(n int) int {
+func T13(n int) int {
 	return goldenRatio(n)
 }
 

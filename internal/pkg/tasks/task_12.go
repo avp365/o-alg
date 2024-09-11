@@ -12,14 +12,14 @@ func Run_task_12() {
 
 	start := time.Now()
 
-	fmt.Println(t11(int(a), int(n)), time.Since(start))
+	fmt.Println(T11(int(a), int(n)), time.Since(start))
 
 	start = time.Now()
 
 	fmt.Println(math.Pow(a, n), time.Since(start))
 }
 
-func t12(a, n int) int {
+func T12(a, n int) int {
 
 	return powRec(a, n)
 }

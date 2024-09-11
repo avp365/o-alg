@@ -19,7 +19,7 @@ func Run_task_11() {
 	fmt.Println(math.Pow(a, n), time.Since(start))
 }
 
-func t11(a, n int) int {
+func T11(a, n int) int {
 
 	answer := 1
 

@@ -11,11 +11,11 @@ func Run_task_03() {
 
 	start := time.Now()
 
-	fmt.Println(t03(n), time.Since(start))
+	fmt.Println(T03(n), time.Since(start))
 
 }
 
-func t03(n int) int {
+func T03(n int) int {
 	return f01(n)
 
 }

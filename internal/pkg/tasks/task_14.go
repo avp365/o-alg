@@ -12,15 +12,15 @@ func Run_task_14() {
 
 	start := time.Now()
 
-	fmt.Println(t14(n), time.Since(start))
+	fmt.Println(T14(n), time.Since(start))
 
 }
 
-func t14(n int) int {
+func T14(n int) int {
 	return goldenRatio(n)
 }
 
-func goldenRatio(n int) int {
+func goldenRatio2(n int) int {
 
 	φ := (1 + math.Sqrt(5)) / 2
 	F := math.Pow(φ, float64(n)) / math.Sqrt(5)

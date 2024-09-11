@@ -11,11 +11,11 @@ func Run_task_02() {
 
 	start := time.Now()
 
-	fmt.Println(t02(n), time.Since(start))
+	fmt.Println(T02(n), time.Since(start))
 
 }
 
-func t02(n int) int {
+func T02(n int) int {
 	return fibIterN(n)
 }
 
